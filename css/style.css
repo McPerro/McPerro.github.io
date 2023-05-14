@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formulario{
+    text-align: center;
+}
+.formulario h1 {
+    font-family: Arial, Helvetica, sans-serif,
+        serif;
+    font-size: 40px;
+    color: #111111;
+    font-weight: 600;
+}
+
+.formulario p {
+    color: #1b1c1e;
+}
+
+p,
+input,
+textarea,
+label, .formulario button {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.formulario form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input,
+textarea,
+label, .formulario button{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    color: #828282;
+}
+
+input,
+textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #828282;
+}
+
+.formulario button[type=submit] {
+    background-color: #1b1c1e;
+    padding: 15px 0;
+    color: #F98B1C;
+    font-size: 18px;
+    border-bottom: none;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.formulario button[type=submit]:hover {
+    background: #F98B1C;
+    color: #111111;
+}
+
+input,
+textarea, .formulario button {
+    color: #111111;
+    font-size: 18px;
+    padding: 10px;
+}
+
+input:focus,
+textarea:focus{
+    outline: 1px solid #828282;
+}
+
+.formulario a {
+    font-size: 18px;
+    color: #111111;
+    font-style: italic;
+    border-bottom: 1px solid #F98B1C;
+}
+
+a:hover {
+    color: #F98B1C;
+}

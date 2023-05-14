@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-color: #F98B1C;
+}
+
+
+/*===================MENU==========================*/
+
+
+.navbar a {
+    font-size: 18px !important;
+    font-weight: 700;
+    color: white;
+    margin-right: 55px;
+    margin-left: 55px;
+    transition: transform 0.2s ease-out;
+}
+
+
+.navbar a:hover {
+    color: #F98B1C;
+    transform: scale(1.2);
+}
+
+
+#navbarSupportedContent a{
+    color: white;
+}
+
+#navbarSupportedContent a:hover{
+    color:#F98B1C;
+}
+
+#navbarSupportedContent .active{
+    color:#F98B1C;
+}
+
+/*SLIDER*/
+
+.eslider {
+    background-color: white;
+}
+
+.carousel-item {
+    height: 32rem;
+    background: #000;
+    color: white;
+    position: relative;
+}
+
+.slider {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 38px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slider h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.slider p{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.botoncito {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px;
+    color: #111111;
+    background-color: #F98B1C;
+    border-color: #F98B1C;
+}
+.botoncito:hover{
+    color: #F98B1C;
+    background-color: #111111;
+    border-color: #111111;
+}
+
+.imagenes {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+}
+
+/*FIN DE SLIDER*/
+
+/*Articulo*/
+.row h2 {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.titulo h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #111111;
+}
+
+
+.badge-color span{
+    background-color: #111111;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.titulo h5 {
+    color: #111111;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.titulo h5:hover {
+    color: #F98B1C;
+}
+
+.card {
+    border: white;
+}
+
+
+.card-art .card:hover {
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+
+.card-text a{
+    color: white;
+    font-size: 15px;
+    padding-top: 50px;
+}
+.card-text a:hover{
+    color: #F98B1C;
+    font-size: 15px;
+    padding-top: 50px;
+}
+
+.tema{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #F98B1C;
+}
+.tema h3{
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+    color: #111111;
+
+}
+.tema p{
+    font-size: 14px;
+    margin-left: 28px;
+    font-style: italic;
+}
+.texto h4{
+    font-style: italic;
+    border-bottom: 2px solid #F98B1C;
+}
+
+.parrafo p{
+    font-size: 15.5px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.parrafo span{
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #F98B1C;
+}
+
+#paginacion a{
+    margin-top: 40px;
+    font-size: 16px;
+    color: #111111;
+    border-color: #111111;
+}
+
+#paginacion .active{
+    color: #111111;
+    background-color: #F98B1C;
+}
+
+#paginacion a:hover{
+    color: #111111;
+    background-color: #F98B1C;
+}
+
+
+/*SIDEBAR*/
+.sidebar h3{
+    font-size: 25px;
+    border-bottom: #F98B1C 2px solid;
+}
+.sidebar p{
+    font-size: 15px;
+    text-align: justify;
+}
+
+.tabla{
+    margin-top: 50px;
+    border: 1px solid #111111;
+}
+
+.tabla li{
+    border: solid #111111;
+}
+
+.tabla a{
+    color: #111111;
+}
+
+.tabla a:hover{
+    color: #F98B1C;
+}

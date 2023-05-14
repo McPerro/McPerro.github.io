@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/icono.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        /* Estilos para la pantalla de carga */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F98B1C;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Estilos para la animación de carga */
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            animation: rotate 2s linear infinite;
+        }
+
+        .spinner-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #111111;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .spinner-dot:nth-child(2) {
+            animation-delay: -1s;
+        }
+
+        /* Animación de rotación */
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Animación de rebote */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: scale(0);
+            }
+
+            50% {
+                transform: scale(4);
+            }
+        }
+
+        /* Estilos para ocultar la pantalla de carga */
+        .loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+
+    <title>Reseñas Geek</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="loading">
+            <div class="spinner">
+                <div class="spinner-dot"></div>
+                <div class="spinner-dot"></div>
+                <div class="spinner-dot"></div>
+            </div>
+        </div>
+
+        <!--========================================================== -->
+        <!-- ENCABEZADO -->
+        <!--========================================================== -->
+
+        <header>
+            <div class="row text-center">
+                <div class="col">
+                    <img src="img/Logo.png" class="img-fluid mt-2 mb-2" width="300px" alt="logo">
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="row">
+                <div class="col" style="background-color:#111111;">
+
+                    <nav class="navbar navbar-expand-lg p-2 navbar-dark ">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="peliculas.html">Películas</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="series.html">Series</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="anime.html">Anime</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Contacto</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <!--========================================================== -->
+        <!-- slider -->
+        <!--========================================================== -->
+
+        <div class="row eslider">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner imagenes">
+                    <div class="carousel-item active">
+                        <div class="overlay-image" style="background-image:url(./img/vinland-1.jpg) ;"></div>
+                        <div class="container slider">
+                            <h2>vinland saga</h2>
+                            <p>Una historia de vikingos centrada en la guerra y la venganza, pero con un mensaje muy
+                                bonito sobre la vida.</p>
+                            <a href="#" class="botoncito btn btn-sm btn-primary">
+                                Ver Reseña
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="overlay-image" style="background-image:url(./img/3.jpg) ;"></div>
+                        <div class="container slider">
+                            <h2>WALL·E</h2>
+                            <p>La historia de Wall-E, un robot que limpia el planeta de basura que cambia totalmente
+                                cuando conoce a Eva.</p>
+                            <a href="wall-e-r.html" class="botoncito btn btn-sm btn-primary">
+                                Ver Reseña
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="overlay-image" style="background-image:url(./img/2.jpg) ;"></div>
+                        <div class="container slider">
+                            <h2>Re:Zero kara Hajimeru Isekai Seikatsu</h2>
+                            <p>La historia de un joven deprimido que termina siendo tranportado a un mundo de fantasia
+                                <br>donde comienza su aventura cuando, por obra del destino conoce a una hermosa chica
+                                elfa.
+                            </p>
+                            <a href="rezero-s1.html" class="botoncito btn btn-sm btn-primary">
+                                Ver Reseña
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+
+        <!--========================================================== -->
+        <!-- ARTICULO -->
+        <!--========================================================== -->
+
+
+        <div class="row titulo">
+            <div class="col-xl-9 col-sm-9 pt-4" style="background-color: white;">
+
+                <h2 class="badge-color" style="font-style:italic; color: #F98B1C;">
+                    <span>Reseñas más recientes</span>
+                </h2>
+
+                <br><br>
+
+                <div class="row row-cols-1 row-cols-md-2 g-3 p-4 card-art">
+                    <div class="col">
+                        <div class="card" style="background-color:whitesmoke;">
+                            <a href="rezero-s1.html">
+                                <img src="img/rezero.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Re:Zero kara Hajimeru Isekai Seikatsu</h5>
+                            </a>
+                            <p class="card-text text-muted" style="font: size 10px;">
+                                - Publicado el 10/05/22
+                                <br><br>
+                                <span class="badge bg-dark"><a href="anime.html"> Anime </a></span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="background-color:whitesmoke;">
+                        <a href="wall-e-r.html">
+                            <img src="img/walle-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">WALL·E</h5>
+                        </a>
+                        <p class="card-text text-muted" style="font: size 10px;">
+                            - Publicado el 10/05/22
+                            <br><br>
+                            <span class="badge bg-dark"><a href="peliculas.html"> Película </a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="background-color:whitesmoke;">
+                    <a href="arcane-s1.html">
+                        <img src="img/arcane-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Arcane</h5>
+                    </a>
+                    <p class="card-text text-muted" style="font: size 10px;">
+                        - Publicado el 10/05/22
+                        <br><br>
+                        <span class="badge bg-dark"><a href="series.html"> Serie </a></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="background-color:whitesmoke;">
+                <a href="#">
+                    <img src="img/ragna-1.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ragnarök</h5>
+                </a>
+                <p class="card-text text-muted" style="font: size 10px;">
+                    - Publicado el 10/05/22
+                    <br><br>
+                    <span class="badge bg-dark"><a href="series.html"> Serie </a></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    </div>
+
+
+    <!--========================================================== -->
+    <!-- SIDEBAR -->
+    <!--========================================================== -->
+
+    <div class="col-xl-3 col-sm-3 p-3 sidebar" style="background-color:white; border-left: 1px solid;">
+
+        <div>
+            <h3>Sobre este blog</h3>
+            <p>Este blog fue creado como un espacio donde yo pueda expresar mi opinion acerca de las obras que me
+                gustan mucho, conforme pase el tiempo iré actualizando el blog con mis reseñas más objetivas
+                posibles, dependiendo de cuanto tiempo me lleve cada obra, ah, y recordad que esta es unicamente mi
+                opinión completamente personal y objetiva ;)</p>
+        </div>
+
+        <div class="card tabla">
+            <div class="card-header" style="background-color:#111111; color:#F98B1C;">
+                Reseñas más Populares
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="rezero-s1.html"> Re:Zero </a></li>
+                <li class="list-group-item"><a href="wall-e-r.html"> Wall-e</a></li>
+                <li class="list-group-item"><a href="arcane-s1.html"> Arcane </a></li>
+                <li class="list-group-item"><a href=""> Ragnarök </a></li>
+                <li class="list-group-item"><a href=""> Vinland Saga </a></li>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+
+    <!--Nomas-->
+    <div class="row" style="height: 4rem;">
+        <div class="col" style="background-color: white;">
+
+        </div>
+    </div>
+
+    <!--========================================================== -->
+    <!-- FOOTER -->
+    <!--========================================================== -->
+
+
+    <footer>
+        <div class="row p-2" style="background-color:#111111;">
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center my-2">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <a href="index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                            <img src="img/icono.png" alt="" class="bi" width="30" height="30">
+                        </a>
+                        <span class="text-muted">© 2022 Reseñas Geek</span>
+                    </div>
+
+                </footer>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                document.querySelector('.loading').classList.add('loaded');
+            }, 3000);
+        };
+    </script>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
